@@ -1,12 +1,12 @@
 import time
 def calculate():
-    percent = eval(input("Enter the percent you want to calculate: "))
-    percentNum = eval(input("Enter the number you want a percentage of: "))
+    percent = eval(input("\nEnter the percent you want to calculate.\n\nPercent must be in decimal form!: "))
+    percentNum = eval(input("\nEnter the number you want a percentage of: "))
     result = (percent) * (percentNum)
 
-    print (result)
+    print (percent,"percent of", percentNum, "is", result)
 
-    answer = input("Do you want to do another?\ny/n: ")
+    answer = input("\nDo you want to do another?\ny/n: ")
 
     if answer == 'y':
         calculate()
@@ -17,11 +17,10 @@ def calculate():
     elif answer == 'Yes':
         calculate()
     elif answer == 'n':
-        print("Thanks for testing out the percentage calculator!")
+        print("\nThanks for testing out the percentage calculator!")
         time.sleep(0.5)
         quit()
     else:
-        print("Please check your choice and try again... ")
+        print("\nPlease check your choice and try again... ")
         quit()
 calculate()
-  
